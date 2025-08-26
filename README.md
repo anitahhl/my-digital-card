@@ -1,16 +1,6 @@
-# myPDA - Digital Business Card
+# my Digital Business Card
 
-一個現代化的數位名片網站，使用 Next.js、Framer Motion 和 GSAP 構建。
-
-## 功能特色
-
-- 🎨 精美的動畫效果（GSAP + Framer Motion）
-- 📱 響應式設計，支援手機和桌面
-- 🌊 3D 粒子波背景效果
-- ✨ 流暢的頁面轉場動畫
-- 📧 聯絡資訊展示
-- 📱 支援 vCard 下載
-- 🔗 社群媒體連結
+使用 Next.js、Framer Motion 和 GSAP 構建。
 
 ## 技術棧
 
@@ -49,8 +39,3 @@ npm run deploy
 
 1. 修改 `src/app/card000/page.tsx` 中的個人資訊
 2. 更換 `public/images/default.png` 頭像圖片
-3. 調整 `src/components/IntroOverlay.tsx` 中的動畫路徑
-
-## 授權
-
-MIT License
