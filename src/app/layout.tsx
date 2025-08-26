@@ -3,7 +3,7 @@ import "../styles/globals.css"
 
 
 export const metadata: Metadata = {
-  title: "Landing Page",
+  title: "Business Card",
   description: "...",
 }
 

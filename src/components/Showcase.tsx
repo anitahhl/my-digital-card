@@ -18,7 +18,7 @@ export default function Showcase() {
   }, [])
 
   return (
-    <section ref={ref} className="max-w-6xl mx-auto px-6 pt-20 grid md:grid-cols-2 md:gap-80">
+    <section ref={ref} className="max-w-6xl mx-auto px-6 pt-20 pb-6 grid md:grid-cols-2 md:gap-80">
       <div key="1" className="info-card md:p-6 p-2">
         <p className="text-slate-300 text-sm mt-1">myPDA 是一套全地端 GenAI 系統平台，另有提供雲地整合服務，滿足不同產業在資料隱私、運算資源與落地應用上的需求。從個人電腦至企業級 GPU 伺服器等多樣化環境，全面掌控資料與運算資源。</p>
       </div>

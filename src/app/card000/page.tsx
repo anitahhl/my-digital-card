@@ -89,7 +89,7 @@ export default function Card000Page() {
         </MotionSection>
       </div>
       <footer className="fixed bottom-0 left-0 right-0 z-10 py-8 text-center">
-        <a href="/"><p className="text-white/60 text-xl font-semibold">myPDA</p></a>
+        <a href="/"><p className="text-white/90 text-xl font-semibold">myPDA</p></a>
       </footer>
       </>
       )}

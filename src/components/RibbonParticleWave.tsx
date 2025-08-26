@@ -37,8 +37,8 @@ export default function RibbonParticleWave({
   pointSize = 0.022,
   amplitude = 0.6,
   speed = 0.5,
-  color = "#d7dbe3",
-  pointOpacity = 0.4,
+  color = "#fff",
+  pointOpacity = 0.3,
   fullscreen = true,
   rotation = [0, Math.PI / 1.5, Math.PI / 1.75], // Math.PI / 1
   zIndex = 0,
