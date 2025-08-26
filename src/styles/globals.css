@@ -2,16 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 載入字體 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 html, body {
   height: 100%;
   background: radial-gradient(1200px 600px at 50% -10%, rgba(99,102,241,0.15), transparent 60%) #0b1220;
   color: #e5e7eb;
-  background-color: #fff;
   font-family: "Montserrat", sans-serif;
+  /* 改善字體渲染 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .search {
-  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur shadow-md shadow-white/5;
+  @apply rounded-3xl border border-white/10 bg-white/5 shadow-md shadow-white/5;
+  /* 改善行動裝置兼容性 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* 降級方案：如果不支援 backdrop-blur */
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 行動裝置優化 */
+@supports not (backdrop-filter: blur(12px)) {
+  .search {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* 手機端字體和顯示優化 */
+@media (max-width: 768px) {
+  html, body {
+    /* 防止字體過小 */
+    font-size: 16px;
+    /* 改善觸控體驗 */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* 確保霧面效果在手機上顯示 */
+  .backdrop-blur-xl,
+  .backdrop-blur {
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* 改善按鈕觸控區域 */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 :root{

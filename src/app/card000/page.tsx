@@ -43,7 +43,12 @@ export default function Card000Page() {
              animate={{ opacity: 1, y: 0 }}
              exit={{ opacity: 0, y: -24 }}
              transition={{ duration: 0.35, ease: "easeOut" }}
-             className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl overflow-hidden"
+             className="rounded-3xl border border-white/10 bg-white/5 shadow-xl overflow-hidden"
+             style={{
+               backdropFilter: 'blur(20px)',
+               WebkitBackdropFilter: 'blur(20px)',
+               background: 'rgba(255, 255, 255, 0.08)'
+             }}
            >
           {/* Header */}
           <div className="p-8 sm:p-10 flex items-center gap-6">
@@ -103,7 +108,11 @@ function ContactRow({ href, label, children }: { href: string; label: string; ch
   const A: any = isExternal ? "a" : Link
   const props = isExternal ? { href, target: "_blank", rel: "noopener noreferrer" } : { href }
   return (
-    <A {...props} className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 px-3 py-3 transition">
+    <A {...props} className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 px-3 py-3 transition"
+       style={{
+         backdropFilter: 'blur(8px)',
+         WebkitBackdropFilter: 'blur(8px)'
+       }}>
       <span className="inline-grid place-items-center size-10 rounded-lg bg-white/10 border border-white/10 text-white/90">
         {children}
       </span>
