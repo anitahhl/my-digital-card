@@ -1,5 +1,6 @@
 "use client"
-import { motion, useReducedMotion } from "framer-motion"
+import { useReducedMotion } from "framer-motion"
+import { MotionDiv, MotionP, MotionH1 } from '@/components/common/motion'
 
 export default function Hero() {
   const prefersReduced = useReducedMotion()
@@ -9,24 +10,25 @@ export default function Hero() {
   }
   return (
     <header className="grid place-items-center py-24 pt-36 text-center">
-      <motion.h1
+      <MotionH1
         variants={fadeUp}
         initial="hidden"
         animate="show"
         className="text-5xl md:text-6xl font-extrabold tracking-tight"
       >
         myPDA
-      </motion.h1>
+      </MotionH1>
 
-      <motion.p
+      <MotionP
         variants={fadeUp}
         initial="hidden"
         animate="show"
         transition={{ delay: 0.1 }}
         className="mt-6 text-lg text-slate-300 max-w-prose px-6"
       >
-        </motion.p>
-      <motion.div
+        </MotionP>
+
+      <MotionDiv
         initial={{ opacity: 0, scale: prefersReduced ? 1 : 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.15 }}
@@ -35,7 +37,7 @@ export default function Hero() {
         <button className="w-80 px-5 py-2.5 text-sm">
           BUSINESS CARD
         </button>
-      </motion.div>
+      </MotionDiv>
       
     </header>
   )

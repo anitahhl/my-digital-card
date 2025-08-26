@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { MotionSection } from '@/components/common/motion'
 import { usePathname } from "next/navigation"
 
 import Link from "next/link"
@@ -37,7 +37,7 @@ export default function Card000Page() {
       {/* 內容 */}
       <div className="relative mx-auto max-w-xl px-6 pt-12 sm:pt-24 pb-8">
         {/* 電子名片卡 */}
-                 <motion.section 
+            <MotionSection 
              key={path}
              initial={{ opacity: 0, y: 24 }}
              animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function Card000Page() {
             Add vCard
             </a>
           </div>
-        </motion.section>
+        </MotionSection>
       </div>
       <footer className="fixed bottom-0 left-0 right-0 z-10 py-8 text-center">
         <a href="/"><p className="text-white/60 text-xl font-semibold">myPDA</p></a>
